@@ -4,7 +4,7 @@ import './scss/index.scss'
 console.log('Working!');
 
 async function start() {
-  await Promise.resolve()
+  return await Promise.resolve('asinc working s !')
 }
 
-start()
+start().then(console.log);
