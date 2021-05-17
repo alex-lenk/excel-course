@@ -1,0 +1,99 @@
+@import "variables";
+@import "mixins";
+
+.db {
+}
+
+.db__header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: $db-header-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 2px rgba(60, 64, 67, .15);
+  z-index: 10;
+}
+
+.db__new {
+  margin-top: $db-header-height;
+  padding: 1.5rem;
+  background-color: #dadce0;
+}
+.db__view {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.db__create {
+  width: 160px;
+  height: 160px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #dadce0;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: color .2s ease-in-out, border-color .2s ease-in-out, background-color .2s ease-in-out;
+
+  &:hover {
+    color: green;
+    border-color: green;
+  }
+
+  &:active {
+    background-color: green;
+    border-color: green;
+    color: #fff;
+  }
+}
+
+.db__table {
+  padding: 1rem;
+}
+
+.db__list-header {
+  display: flex;
+  justify-content: space-between;
+  color: #202124;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 0 12px;
+}
+
+.db__list {
+  @include unList;
+}
+
+.db__record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 25px;
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: #e6f4ea;
+  }
+}
+
+.db__record-link {
+  text-decoration: none;
+  color: #202124;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

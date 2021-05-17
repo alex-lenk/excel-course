@@ -2,11 +2,11 @@
 @import "mixins";
 
 .excel__header {
-  width: 100%;
   height: $header-height;
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   padding: 8px 4px 0;
   display: flex;
   justify-content: space-between;

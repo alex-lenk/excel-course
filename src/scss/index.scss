@@ -6,6 +6,7 @@
 @import "toolbar";
 @import "table";
 @import "formula";
+@import "dashboard";
 
 * {
   margin: 0;
@@ -20,4 +21,6 @@ body {
 
 .excel {
   position: relative;
+  color: #888;
+  height: 100%;
 }
