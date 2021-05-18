@@ -10,11 +10,15 @@
     "arrow-parens": "off",
     "comma-dangle": "off",
     "require-jsdoc": "off",
+    "spaced-comment": "off",
+    "no-trailing-spaces": "off",
+    "no-unused-vars": "off",
+    "operator-linebreak": "off",
     "max-len": [
       "error",
       {
         "ignoreUrls": true,
-        "code": 80
+        "code": 120
       }
     ],
     "indent": [1, 2]
