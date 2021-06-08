@@ -72,7 +72,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/favicon'),
-          to: path.resolve(__dirname, 'public_html/favicon')
+          to: path.resolve(__dirname, 'public_html/')
         }
       ]
     }),

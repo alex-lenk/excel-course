@@ -15,6 +15,7 @@
   flex-direction: row;
   min-height: 20px;
   height: $row-height;
+  user-select: none;
 }
 
 .row-info {
@@ -73,6 +74,7 @@
   right: 0;
   bottom: 0;
   opacity: 0;
+  z-index: 10;
   background-color: $primaryColor;
   transition: opacity .2s ease-in-out;
 
