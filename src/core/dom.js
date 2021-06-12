@@ -79,6 +79,13 @@ class Dom {
       })
   }
 
+  getStyles(styles = []) {
+    return styles.reduce((res, s) => {
+      res[s] = this.$el.style[s]
+      return res
+    }, {})
+  }
+
   id(parse) {
     if (parse) {
       const parsed = this.id().split(':')
@@ -95,12 +102,22 @@ class Dom {
     return this
   }
 
+  attr(name, value) {
+    if (value) {
+      this.$el.setAttribute(name, value)
+      return this
+    }
+    return this.$el.getAttribute(name)
+  }
+
   addClass(className) {
     this.$el.classList.add(className)
+    return this
   }
 
   removeClass(className) {
     this.$el.classList.remove(className)
+    return this
   }
 }
 
@@ -110,10 +127,8 @@ export function $(selector) {
 
 $.create = (tagName, classes = '') => {
   const el = document.createElement(tagName)
-
   if (classes) {
     el.classList.add(classes)
   }
-
   return $(el)
 }
